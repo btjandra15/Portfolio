@@ -1,16 +1,18 @@
 import React from 'react'
 import vocabHunterPNG from "../images/portfolioImages/vocab-hunter-icon.png"
-import lowPolyFPSPNG from "../images/portfolioImages/lowPolyFPSImg.png"
+import platformerIMG from "../images/portfolioImages/2dPlatformerIMG.png"
 
 const Portfolio = () => {
     const projects = [
         {
             id: 1,
-            src: vocabHunterPNG
+            src: vocabHunterPNG,
+            link: ""
         },
         {
             id: 2,
-            src: lowPolyFPSPNG,
+            src: platformerIMG,
+            link: "https://github.com/btjandra15/2DPlatformerGame"
         }
     ]
 
@@ -22,14 +24,18 @@ const Portfolio = () => {
             </div>
 
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-                {projects.map(({id, src, style}) => {
+                {projects.map(({id, src, link}) => {
                     return(
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
                             <img src={src} alt="" className="rounded-md duration-200 hover:scale-105 h-48"/>
 
                             <div className='flex items-center justify-center'>
                                 <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                                <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
+                                <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+                                    <a href={link} target='_blank' rel='noreferrer'>
+                                        Code
+                                    </a>
+                                </button>
                             </div>
                         </div>
                     )
