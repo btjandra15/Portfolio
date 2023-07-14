@@ -1,6 +1,7 @@
 import React from 'react'
 import {MdOutlineKeyboardArrowRight} from "react-icons/md"
 import { Link } from 'react-scroll'
+import '../index.css'
 
 const Home = () => {
   return (

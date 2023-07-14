@@ -12,7 +12,7 @@ const SocialLinks = () => {
                     LinkedIn <FaLinkedin size={30}/> 
                 </>
             ),
-            href: 'https://linkedin.com',
+            href: 'https://www.linkedin.com/in/brandon-tjandra-9a29281ab/',
             style: 'rounded-tr-md'
         },
         {

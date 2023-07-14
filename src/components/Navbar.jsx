@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {FaBars, FaTimes} from "react-icons/fa"
 import { Link } from 'react-scroll';
 
@@ -31,11 +31,16 @@ const Navbar = () => {
     ]
 
     const [nav, setNav] = useState(false);
+    const [animate, setAnimate] = useState(false);
+
+    useEffect(() => {
+        setAnimate(true)
+    }, [])
 
     return (
         <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
             <div>
-                <h1 className='text-5xl ml-2'>Brandon</h1>
+                <h1 className='text-5xl ml-2'>Hi, I'm Brandon</h1>
             </div>
 
             <ul className='hidden md:flex'>
