@@ -1,27 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react'
-import vocabHunterPNG from "../images/portfolioImages/vocab-hunter-icon.png"
-import platformerPNG from "../images/portfolioImages/2dPlatformerIMG.png"
-import portfolioWebsitePNG from "../images/portfolioImages/portfolioWebsite.png"
+import React, { useEffect, useRef, useState } from 'react';
+import vocabHunterPNG from "../images/portfolioImages/vocab-hunter-icon.png";
+import portfolioWebsitePNG from "../images/portfolioImages/portfolioWebsite.png";
+import jellyFarmPNG from "../images/portfolioImages/jellyFarmPNG.png";
 import CloseIcon from '@mui/icons-material/Close';
 
 const Portfolio = () => {
     const projects = [
         {
             id: 1,
+            name: "Portfolio Website",
+            src: portfolioWebsitePNG
+        },
+        {
+            id: 2,
             name: "Vocab Hunter Website",
             src: vocabHunterPNG,
             link: ""
         },
         {
-            id: 2,
-            name: "2d Platformer Game",
-            src: platformerPNG,
-            link: "https://github.com/btjandra15/2DPlatformerGame"
-        },
-        {
             id: 3,
-            name: "Portfolio Website",
-            src: portfolioWebsitePNG
+            name: "Jelly Farm Game",
+            src: jellyFarmPNG,
+            link: "https://github.com/btjandra15/2DIdleClickerGame"
         }
     ]
 
