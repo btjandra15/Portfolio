@@ -1,55 +1,58 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import vocabHunterPNG from "../images/portfolioImages/vocab-hunter-icon.png";
 import portfolioWebsitePNG from "../images/portfolioImages/portfolioWebsite.png";
 import jellyFarmPNG from "../images/portfolioImages/jellyFarmPNG.png";
 import CloseIcon from '@mui/icons-material/Close';
+import socialSphereXPNG from "../images/portfolioImages/socialmediawebsite.png";
+import Popup from "./Popup/Popup"
 
 const Portfolio = () => {
     const projects = [
         {
             id: 1,
             name: "Portfolio Website",
-            src: portfolioWebsitePNG
+            src: portfolioWebsitePNG,
+            githubLink: "https://github.com/btjandra15/Portfolio",
+            toolsUsed: "Made with ReactJS & TailwindCSS"
         },
         {
             id: 2,
             name: "Vocab Hunter Website",
             src: vocabHunterPNG,
-            link: ""
+            githubLink: "https://github.com/btjandra15/vocab-hunter",
+            toolsUsed: "Made with ReactJS, TailwindCSS, Auth0, and MongoDB"
         },
         {
             id: 3,
+            name: "Social Sphere X",
+            src: socialSphereXPNG,
+            githubLink: "https://github.com/btjandra15/socialspherex",
+            toolsUsed: "Made with ReactJS, Bootstrap, and MongoDB"
+        },
+        {
+            id: 4,
             name: "Jelly Farm Game",
             src: jellyFarmPNG,
-            link: "https://github.com/btjandra15/2DIdleClickerGame"
-        }
+            githubLink: "https://github.com/btjandra15/2DIdleClickerGame",
+            toolsUsed: "Made with Unity using C# for scripting"
+        },
     ]
 
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [currentImageSrc, setCurrentImageSrc] = useState(false);
-    const bubbleRef = useRef(null);
-    
-    const handleClick = (src) => {
-        if(selectedImage === src){
-            setSelectedImage(null);
-        }else{
-            setSelectedImage(src);
-        }
-    };
+    const [projectPopups, setProjectPoups] = useState(projects.map(() => false));
 
-    const handleClickOutside = (event) => {
-        if(bubbleRef.current && !bubbleRef.current.contains(event.target)){
-            setSelectedImage(null);
-        }
+    const openPopup = (projectId) => {
+        const newPopups = [...projectPopups];
+        newPopups[projectId - 1] = true;
+
+        setProjectPoups(newPopups);
     }
 
-    useEffect(() => {
-        document.addEventListener('click', handleClickOutside);
+    const closePopup = (projectId) => {
+        const newPopups = [...projectPopups];
+        newPopups[projectId - 1] = false;
 
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        }
-    }, [selectedImage])
+        setProjectPoups(newPopups);
+    }
 
     return (
         <div name="Portfolio" className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
@@ -59,37 +62,38 @@ const Portfolio = () => {
                 </div>
 
                 <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-                    {projects.map(({id, name, src, link}) => {
-                        const isImageSelected = selectedImage === src;
-
+                    {projects.map(({id, name, src, githubLink, toolsUsed}) => {
                         return(
                             <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
                                 <h1 className='text-3xl flex items-center justify-center'>{name}</h1>
-                                <img src={src} alt="" className="rounded-md duration-200 hover:scale-105 h-48 w-80 object-cover cursor-pointer" onClick={() => handleClick(src)}/>
+                                <img src={src} alt="" className="rounded-md duration-200 hover:scale-105 h-48 w-80 object-cover cursor-pointer" onClick={() => openPopup(id)}/>
 
-                                <div className='flex items-center justify-center'>
-                                    {isImageSelected && (
-                                        <div className="floating-bubble absolute bg-gradient-to-b from-black to-gray-800">
-                                            <CloseIcon className="absolute top-2 right-2 cursor-pointer text-white" onClick={() => handleClick(src)}/>
+                                <div className='flex items-center justify-center '>
+                                    <Popup trigger={projectPopups[id - 1]}>
+                                        <h1 className='flex items-center justify-center '>{name}</h1>
 
-                                            <div className=' text-white p-4 rounded-md flex items-center justify-center sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0r'>
-                                                <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                                                    
-                                                <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-                                                    <a href={link} target='_blank' rel='noreferrer'>
-                                                        Code
-                                                    </a>
-                                                </button> 
-                                            </div>
+                                        <li className='flex items-center justify-center'>{toolsUsed}</li>
+
+                                        <div className='p-4 rounded-md flex items-center justify-center sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0r'>
+                                            <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
+                                                
+                                            <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+                                                <a href={githubLink} target='_blank' rel='noreferrer'>
+                                                    Code
+                                                </a>
+                                            </button> 
                                         </div>
-                                    )}
 
-                                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105' onClick={() => handleClick(src)}>View Details</button>
+                                        <CloseIcon className="absolute top-2 right-2 cursor-pointer text-black" onClick={() => closePopup(id)}/>
+                                    </Popup>
+                                        
+                                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105' onClick={() => openPopup(id)}>View Details</button>
                                 </div>
                             </div>
                         )
                     })} 
                 </div>
+            
             </div>
         </div>
     )
