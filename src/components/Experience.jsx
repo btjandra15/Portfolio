@@ -1,7 +1,7 @@
 import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import "react-vertical-timeline-component/style.min.css";
-import { FaSchool } from 'react-icons/fa';
+import { FaSchool, FaLaptop } from 'react-icons/fa';
 
 const Experience = () => {
   return (
@@ -12,7 +12,7 @@ const Experience = () => {
             </div>
 
             <VerticalTimeline lineColor='#3e497a'>
-                <VerticalTimelineElement className='' date='2016-2020' iconStyle={{background: "#3e497a", color: "#fff"}} icon={<FaSchool/>}>
+                <VerticalTimelineElement className='' date='Sep 2016 - Jun 2020' iconStyle={{background: "#3e497a", color: "#fff"}} icon={<FaSchool/>}>
                     <h3 className='text-black'>
                         Maspeth High School, Maspeth, NY
                     </h3>
@@ -20,12 +20,20 @@ const Experience = () => {
                     <p className='text-black'>High School Diploma</p>
                 </VerticalTimelineElement>
 
-                <VerticalTimelineElement className='' date='2020-Present' iconStyle={{background: "#3e497a", color: "#fff"}} icon={<FaSchool/>}>
+                <VerticalTimelineElement className='' date='Aug 2020 - Present' iconStyle={{background: "#3e497a", color: "#fff"}} icon={<FaSchool/>}>
                     <h3 className='text-black'>
                         CUNY - City College, Manhattan, NY
                     </h3>
 
                     <p className='text-black'>Bachelor's of Science - Computer Science</p>
+                </VerticalTimelineElement>
+
+                <VerticalTimelineElement className='' date='Sep 2023 - Present' iconStyle={{background: "#3e497a", color: "#fff"}} icon={<FaLaptop/>}>
+                    <h3 className='text-black'>
+                        MTA, Manhattan, NY
+                    </h3>
+
+                    <p className='text-black'>QA Analyst Intern</p>
                 </VerticalTimelineElement>
             </VerticalTimeline>
         </div>

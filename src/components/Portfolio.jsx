@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import vocabHunterPNG from "../images/portfolioImages/vocab-hunter-icon.png";
 import portfolioWebsitePNG from "../images/portfolioImages/portfolioWebsite.png";
-import jellyFarmPNG from "../images/portfolioImages/jellyFarmPNG.png";
 import CloseIcon from '@mui/icons-material/Close';
-import socialSphereXPNG from "../images/portfolioImages/socialmediawebsite.png";
 import Popup from "./Popup/Popup"
 
 const Portfolio = () => {
@@ -14,27 +11,6 @@ const Portfolio = () => {
             src: portfolioWebsitePNG,
             githubLink: "https://github.com/btjandra15/Portfolio",
             toolsUsed: "Made with ReactJS & TailwindCSS"
-        },
-        {
-            id: 2,
-            name: "Vocab Hunter Website",
-            src: vocabHunterPNG,
-            githubLink: "https://github.com/btjandra15/vocab-hunter",
-            toolsUsed: "Made with ReactJS, TailwindCSS, Auth0, and MongoDB"
-        },
-        {
-            id: 3,
-            name: "Social Sphere X",
-            src: socialSphereXPNG,
-            githubLink: "https://github.com/btjandra15/socialspherex",
-            toolsUsed: "Made with ReactJS, Bootstrap, and MongoDB"
-        },
-        {
-            id: 4,
-            name: "Jelly Farm Game",
-            src: jellyFarmPNG,
-            githubLink: "https://github.com/btjandra15/2DIdleClickerGame",
-            toolsUsed: "Made with Unity using C# for scripting"
         },
     ]
 
