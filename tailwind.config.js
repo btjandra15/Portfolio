@@ -41,7 +41,13 @@ module.exports = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		colors: {}
+  		colors: {
+			primary: "#1c1c22",
+			accent: {
+				DEFAULT: "#00ff99",
+				hover: "#00e187",
+			}
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

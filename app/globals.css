@@ -26,4 +26,7 @@
   :root {
     --radius: 0.5rem;
   }
+  body{
+    @apply font-primary bg-primary text-white leading-loose;
+  }
 }
