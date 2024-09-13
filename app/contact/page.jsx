@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectGroup, SeleectItem, SelectLabel, SelectTrigger, SelectValue, SelectItem } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Contact = () => {
   const info = [
@@ -25,6 +26,22 @@ const Contact = () => {
       description: "Queens, NY",
     },
   ]
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  }
 
   return (
     <motion.section initial={{opacity: 0}} animate={{opacity: 1}} className="py-6">
