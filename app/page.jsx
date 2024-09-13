@@ -16,10 +16,10 @@ const Home = () => {
             <span className="text-xl">Software Engineer</span> 
 
             <h1 className="h1 mb-6">
-              Hello I'm <br /> <span className="text-accent">Brandon Tjandra</span>
+              Hello I&apos;m <br /> <span className="text-accent">Brandon Tjandra</span>
             </h1>
 
-            <p className="max-w-[500px] mb-9 text-white/80">I'm proficient in various programming languages and interested in Machine Learning & Deep Learning</p>
+            <p className="max-w-[500px] mb-9 text-white/80">I&apos;m proficient in various programming languages and interested in Machine Learning & Deep Learning</p>
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size='lg' className="uppercase flex items-center gap-2">
