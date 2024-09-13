@@ -1,7 +1,10 @@
+"use client";
+
 import Photo from "@/components/HomePage/Photo";
 import Social from "@/components/HomePage/Social";
 import Stats from "@/components/HomePage/Stats";
 import { Button } from "@/components/ui/button"
+import { saveAs } from "file-saver";
 import { FiDownload } from "react-icons/fi"
 
 const Home = () => {
@@ -20,9 +23,9 @@ const Home = () => {
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size='lg' className="uppercase flex items-center gap-2">
-                <span>Download Resume</span> 
-
-                <FiDownload className="text-xl"/>
+                <a href="/Resume.pdf" download alt="Download Resume" target="_blank">
+                  <span>Download Resume</span> 
+                </a>
               </Button>
 
               <div className="mb-8 xl:mb-0 ">

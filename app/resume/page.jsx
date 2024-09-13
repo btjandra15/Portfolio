@@ -33,7 +33,7 @@ const Resume = () => {
 
   const experience = {
     title: "Experience",
-    description: "Below are all of my most recent & relevant experience",
+    description: "",
     items: [
       {
         company: "MTA NYCT",

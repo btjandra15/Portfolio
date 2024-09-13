@@ -5,26 +5,18 @@ const Social = ({containerStyles, iconStyles}) => {
     const socials = [
         {
             icon: <FaGithub/>,
-            path: ""
+            path: "https://github.com/btjandra15"
         },
         {
             icon: <FaLinkedinIn/>,
-            path: ""
-        },
-        {
-            icon: <FaYoutube/>,
-            path: ""
-        },
-        {
-            icon: <FaTwitter/>,
-            path: ""
+            path: "https://www.linkedin.com/in/btjandra/"
         },
     ]
 
     return (
         <div className={containerStyles}>
             {socials.map((item, index) => {
-                return <Link key={index} href={item.path} className={iconStyles}>
+                return <Link key={index} href={item.path} className={iconStyles} target="_blank">
                     {item.icon}
                 </Link>
             })}
