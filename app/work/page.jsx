@@ -22,26 +22,6 @@ const Work = () => {
       live: "",
       github: "https://github.com/MartinLahoumh/SeniorDesign",
     },
-    {
-      num: "02",
-      category: 'Fullstack',
-      title: "Jarvis",
-      description: "A web application that takes an image supplied by the user that contains English text (such as a poster or a sign or even just a regular digital image), extracts the text, and translates it to a user's preferred language (i.e. French, Spanish, Chinese, etc.)",
-      stack: [{ name: 'Javascript'}, { name: 'Python'}, { name: 'React.js'}],
-      image: "",
-      live: "",
-      github: "https://github.com/MartinLahoumh/SeniorDesign",
-    },
-    {
-      num: "03",
-      category: 'Fullstack',
-      title: "Jarvis",
-      description: "A web application that takes an image supplied by the user that contains English text (such as a poster or a sign or even just a regular digital image), extracts the text, and translates it to a user's preferred language (i.e. French, Spanish, Chinese, etc.)",
-      stack: [{ name: 'Javascript'}, { name: 'Python'}, { name: 'React.js'}],
-      image: "",
-      live: "",
-      github: "https://github.com/MartinLahoumh/SeniorDesign",
-    },
   ]
 
   const [project, setProject] = useState(projects[0]);
