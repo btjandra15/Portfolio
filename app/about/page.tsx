@@ -9,12 +9,28 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '@/utils/variant'
 import CountUp from 'react-countup'
 
-const aboutData = [
+type SkillInfo = {
+    title: string;
+    icons: React.ReactNode[];
+};
+
+type ExperienceInfo = {
+    title: string;
+    company: string;
+    stage: string;
+};
+
+type AboutItem = {
+    title: string;
+    info: (SkillInfo | ExperienceInfo)[];
+};
+
+const aboutData: AboutItem[] = [
     {
         title: 'Skills',
         info: [
             {
-                title: 'Software Engineer',
+                title: 'Web Developer',
                 icons: [
                     <FaReact/>,
                     <SiNextdotjs/>
@@ -102,11 +118,9 @@ const AboutPage = () => {
 
                     <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-4 items-center xl:items-start">
                         {aboutData[index].info.map((item, idx) => {
-                            return(
+                            return 'icons' in item ? (
                                 <div key={idx} className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'>
                                     <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                                    <div className="">{item.company}:</div>
-                                    <div>{item.stage}</div>
                                 
                                     <div className="flex gap-x-4">
                                         {item.icons?.map((icon, idx) => {
@@ -116,7 +130,13 @@ const AboutPage = () => {
                                         })}
                                     </div>
                                 </div>
-                            )
+                            ) : (
+                                <div key={idx} className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'>
+                                    <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                                    <div className="">{item.company}:</div>
+                                    <div>{item.stage}</div>
+                                </div>
+                            );
                         })}
                     </div>
                 </motion.div>
