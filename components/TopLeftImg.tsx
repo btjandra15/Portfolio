@@ -4,8 +4,8 @@ import TopLeftImgImport from '@/public/top-left-img.png';
 
 const TopLeftImg = () => {
   return (
-    <div className='absolute left-0 top-0 mix-blend-color-dodge z-10 w-[200px] xl:w-[400px] opacity-50 z-0'>
-      <Image src={TopLeftImgImport} alt='Top Left Image' width={400} height={400}/>
+    <div className='absolute left-0 top-0 mix-blend-color-dodge z-10 w-[200px] xl:w-[400px] opacity-50 pointer-events-none'>
+      <Image src={TopLeftImgImport} alt='Top Left Image' className='w-full h-auto'/>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import {Sora} from 'next/font/google';
 import Nav from './Nav';
 import Header from './Header';
 import TopLeftImg from './TopLeftImg';
+import ParticlesContainer from './ParticlesContainer';
 
 const sora = Sora({
     subsets: ['latin'],

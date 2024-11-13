@@ -8,10 +8,10 @@ import { HiChatBubbleBottomCenterText, HiEnvelope, HiRectangleGroup, HiViewColum
 
 const navData = [
     {name: 'Home', path: '/', icon: <HiHome />},
+    {name: 'About', path: '/about', icon: <HiUser />},
     {name: 'Work', path: '/work', icon: <HiViewColumns />},
     {name: 'Services', path: '/services', icon: <HiRectangleGroup />},
     {name: 'Testiomonials', path: '/testimonials', icon: <HiChatBubbleBottomCenterText />},
-    {name: 'About', path: '/about', icon: <HiUser />},
     {name: 'Contact', path: '/contact', icon: <HiEnvelope />},
 ];
 
