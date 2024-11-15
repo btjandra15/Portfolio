@@ -23,7 +23,7 @@ const socialLinks = [
 
 const Socials = () => {
   return (
-    <div className='flex items-center gap-x-5 text-lg'>
+    <div className='flex items-center gap-x-5 text-2xl'>
       {socialLinks.map((social, idx) => {
         return(
           <Link key={idx} href={social.path} className='hover:text-accent transition-all duration-300'>

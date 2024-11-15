@@ -16,7 +16,7 @@ const serviceData = [
     },
     {
         icon: <RxDesktop/>,
-        title: 'Gane Development',
+        title: 'Game Development',
         description: "I provide game development services helping pre existing games with any bug fixes, issues, new features, etc or building a whole new game from scratch using Unity and UE5"
     },
 ]

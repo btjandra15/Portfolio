@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Circles from '@/components/Circles';
-import ServiceSlider from '@/components/ServiceSlider';
+import ServiceSlider from '@/components/Sliders/ServiceSlider';
 import Bulb from '@/components/Bulb';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/utils/variant';

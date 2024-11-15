@@ -11,7 +11,7 @@ const navData = [
     {name: 'About', path: '/about', icon: <HiUser />},
     {name: 'Work', path: '/work', icon: <HiViewColumns />},
     {name: 'Services', path: '/services', icon: <HiRectangleGroup />},
-    {name: 'Testiomonials', path: '/testimonials', icon: <HiChatBubbleBottomCenterText />},
+    // {name: 'Testiomonials', path: '/testimonials', icon: <HiChatBubbleBottomCenterText />},
     {name: 'Contact', path: '/contact', icon: <HiEnvelope />},
 ];
 
