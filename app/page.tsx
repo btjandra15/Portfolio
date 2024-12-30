@@ -15,11 +15,13 @@ export default function Home() {
             Transforming Ideas <br/> Into{' '}
 
             <span className="text-accent"> Reality</span>
+            
           </motion.h1>
 
           <motion.p variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit="hidden" className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sequi, explicabo, nihil nam deserunt veniam laboriosam consequuntur itaque exercitationem mollitia 
-            aspernatur ipsa repudiandae molestias provident quas corrupti ex, veritatis suscipit?
+            I specialize in bringing concepts to life through clean, efficient code and user-centered design. With expertise in modern frameworks, cloud integration, and innovative 
+            problem-solving, I turn complex challenges into seamless digital solutions. Whether building robust applications, optimizing systems, or creating intuitive user 
+            interfaces, I am dedicated to crafting software that bridges the gap between imagination and functionality. Let's build something extraordinary together.
           </motion.p>
 
           <div className="flex justify-center xl:hidden relative">
